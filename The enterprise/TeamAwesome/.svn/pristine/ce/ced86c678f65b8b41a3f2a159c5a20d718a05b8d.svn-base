@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+namespace Model.DomainModel
+{
+    [Serializable()]
+    public class Filter
+    {
+        public List<QuestionGroup> QuestionGroups = new List<QuestionGroup>();
+        // Template Type
+        public FilterType Type { get; set; }
+        // Filter type
+        public string FilterType { get; set; }
+        public string Customer { get; set; }
+        public string Order { get; set; }
+        public string MachineNr { get; set; }
+        public string Name { get; set; }
+
+        public Question FindQuestion(Question question,QuestionGroup questionGroup)
+        {
+            Question foundQuestion = questionGroup.Questions.SingleOrDefault(q => q.Id == question.Id);
+            if (foundQuestion != null)
+            {
+                return foundQuestion;
+            }
+            throw new Exception("kunne ikke finde dit spørgsmål i filtret");
+        }
+
+    }
+
+    public enum FilterType
+    {
+        SimonsTest,TestTemplate,DanishTemplate,EnglishTemplate
+    };
+}

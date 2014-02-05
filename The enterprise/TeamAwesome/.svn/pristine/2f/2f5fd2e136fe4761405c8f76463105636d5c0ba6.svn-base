@@ -1,0 +1,26 @@
+﻿<Window x:Class="TheEnterprise.Pages.Admin.PopUp.QuestionGroup.UpdateQuestionGroup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UpdateQuestionGroup" Height="332" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Update spørgsmålsgruppe" FontSize="15" Margin="0,0,206,0" />
+            <Label x:Name="updateFeedbackLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="392"/>
+            <StackPanel Orientation="Horizontal" Height="215">
+                <StackPanel Width="196" >
+                    <Label Height="25" Content="Titel" />
+                    <Label Height="25"  Content="Rank" />
+                    <Label  Height="25" Content="Info" />
+                </StackPanel>
+                <StackPanel Width="180" >
+                    <TextBox Height="25" x:Name="QuestionGroupTitleTextBox"  />
+                    <TextBox Height="25" x:Name="QuestionRankGroupTextBox" />
+                    <TextBox x:Name="QuestionInfoGroupTextBox" AcceptsReturn="True" TextWrapping="Wrap" Height="161" />
+                </StackPanel>
+            </StackPanel>
+            <Button Height="25" Width="70" Content="Gem" Click="Button_Click" />
+        </StackPanel>
+
+    </Grid>
+</Window>
+

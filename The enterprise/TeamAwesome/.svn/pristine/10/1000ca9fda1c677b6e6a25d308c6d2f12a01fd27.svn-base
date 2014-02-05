@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace TheEnterprise.Pages.Admin.PopUp.Question
+{
+    /// <summary>
+    /// Interaction logic for UpdateQuestion.xaml
+    /// </summary>
+    public partial class UpdateQuestion : Window
+    {
+
+        private Model.DomainModel.Question question;
+        public UpdateQuestion(Model.DomainModel.Question question)
+        {
+            InitializeComponent();
+            this.question = question;
+            QuestionRankTextBox.Text = question.Rank.ToString();
+            QuestionTitelTextBox.Text = question.Title;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.question.Title = QuestionTitelTextBox.Text;
+            this.question.Rank = decimal.Parse(QuestionRankTextBox.Text);
+            Close();
+        }
+    }
+}

@@ -1,0 +1,103 @@
+﻿using System.Linq;
+using System.Windows;
+using Microsoft.Win32;
+using Model;
+using Model.DomainModel;
+
+namespace TheEnterprise
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+
+    public partial class MainWindow : Window
+    {
+        private static Paging paging;
+        public ModelFacade ModelFacade;
+
+        public MainWindow()
+        {
+            // Init UI Componets & page system
+            InitializeComponent();
+
+            ModelFacade = new ModelFacade(getTestFilter());
+            ModelFacade.Save();
+
+            ModelFacade = new ModelFacade(FilterType.TestTemplate);
+            ModelFacade.FindQuestionGroup(1).Title = "hehehehheehheeheheheehehehhe";
+            paging = new Paging(this);
+            // Show home view
+
+            paging.ChangePage(Page.AdminQuestionGroupTemplate);
+        }
+
+        private void FilterOpen(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Filter files (*.filter*)|*.filter*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.ShowDialog();
+        }
+
+        static Filter getTestFilter()
+        {
+            Filter filter = new Filter();
+
+            // Opret spørgsmåls gruppe
+            QuestionGroup questionGroup = new QuestionGroup();
+            questionGroup.Rank = 1;
+            filter.QuestionGroups.Add(questionGroup);
+
+            // Find en questionGroup
+            QuestionGroup findedQuestionGroup = filter.QuestionGroups.Single(qg => qg.Rank == 1);
+
+            // Question 1
+            Question filterType = new Question();
+            filterType.Rank = 1;
+            filterType.Title = "Filter Type?";
+
+            Answer filterTypeAnswer1 = new Answer();
+            filterTypeAnswer1.Rank = 1;
+            filterTypeAnswer1.Title = "4TR Filter";
+            filterTypeAnswer1.Value = "4TR";
+
+            Answer filterTypeAnswer2 = new Answer();
+            filterTypeAnswer2.Rank = 2;
+            filterTypeAnswer2.Title = "5TR Filter";
+            filterTypeAnswer2.Value = "5TR";
+
+
+            filterType.Answers.Add(filterTypeAnswer1);
+            filterType.Answers.Add(filterTypeAnswer2);
+
+            findedQuestionGroup.Questions.Add(filterType);
+
+            // Question 2
+            Question filterCoor = new Question();
+            filterCoor.Rank = 2;
+            filterCoor.Title = "Filter Farve?";
+
+            Answer filterCoorAnswer1 = new Answer();
+            filterCoorAnswer1.Rank = 1;
+            filterCoorAnswer1.Title = "Blå";
+            filterCoorAnswer1.Value = "blue";
+
+            Answer filterCoorAnswer2 = new Answer();
+            filterCoorAnswer2.Rank = 2;
+            filterCoorAnswer2.Title = "Grøn";
+            filterCoorAnswer2.Value = "green";
+            filterCoorAnswer2.Required = filterType.CreateRequiredObject(filterTypeAnswer1);
+
+            filterCoor.Answers.Add(filterCoorAnswer1);
+            filterCoor.Answers.Add(filterCoorAnswer2);
+
+            findedQuestionGroup.Questions.Add(filterCoor);
+            return filter;
+        }
+      
+    }
+
+}

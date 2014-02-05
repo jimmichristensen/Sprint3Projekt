@@ -1,0 +1,180 @@
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.config
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\App.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise_MarkupCompile.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.g.resources
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.Properties.Resources.resources
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csproj.GenerateResource.Cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\Model.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\Model.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.application
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.application
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.config
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.pdb
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.application
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.pdb
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\Model.dll
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.dll
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\Model.pdb
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.pdb
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.baml
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\App.g.cs
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise_MarkupCompile.cache
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.g.resources
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.Properties.Resources.resources
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csproj.GenerateResource.Cache
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Desktop\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.application
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.config
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.baml
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\App.g.cs
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise_MarkupCompile.cache
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.g.resources
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.Properties.Resources.resources
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csproj.GenerateResource.Cache
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.application
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\Model.dll
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.dll
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\Model.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe.manifest
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.application
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.config
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.pdb
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.manifest
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.application
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.pdb
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.dll
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\Model.dll
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.dll
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\DataAccess.pdb
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\Model.pdb
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\WpfPageTransitions.pdb
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csprojResolveAssemblyReference.cache
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.baml
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\MainWindow.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\AnswerView.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\CreateAnswer.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Answer\UpdateAnswer.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\CreateQuestion.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\PopUp\Question\UpdateQuestion.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionGroupView.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Admin\QuestionView.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\homeView.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Pages\Main.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\App.g.cs
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise_MarkupCompile.cache
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.g.resources
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.Properties.Resources.resources
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csproj.GenerateResource.Cache
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe.manifest
+C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.application

@@ -1,0 +1,69 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+using Model.DomainModel;
+using TheEnterprise.Pages.Admin.PopUp.Answer;
+
+namespace TheEnterprise.Pages.Admin
+{
+    /// <summary>
+    /// Interaction logic for AnswerView.xaml
+    /// </summary>
+    public partial class AnswerView : UserControl
+    {
+        private MainWindow mainWindow;
+        private QuestionGroup questionGroup;
+        private Question question;
+
+        public AnswerView(MainWindow mainWindow,QuestionGroup questionGroup, Question question)
+        {
+            InitializeComponent();
+            this.mainWindow = mainWindow;
+            this.questionGroup = questionGroup;
+            this.question = question;
+
+            AnswerListBox.ItemsSource = question.Answers;
+
+        }
+
+        private void CreateAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAnswer  window = new CreateAnswer(mainWindow);
+            window.Show();
+            window.CreatenewAnswer += CreateNewAnswer;
+
+        }
+
+        private void CreateNewAnswer(string title, decimal rank, string value, Question question = null)
+        {
+            if (question != null)
+            {
+                this.question.Answers.Add(new Answer()
+                {
+                    Rank = rank,
+                    Title = title,
+                    Value = value,
+                    Required = question
+                });
+            }
+            else
+            {
+                this.question.Answers.Add(new Answer()
+                {
+                    Rank = rank,
+                    Title = title,
+                    Value = value
+                });
+            }
+          
+
+            mainWindow.ModelFacade.Save();
+            AnswerListBox.Items.Refresh();
+
+        }
+
+        private void GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.ChangeView(new QuestionView(mainWindow,questionGroup));
+        }
+    }
+}

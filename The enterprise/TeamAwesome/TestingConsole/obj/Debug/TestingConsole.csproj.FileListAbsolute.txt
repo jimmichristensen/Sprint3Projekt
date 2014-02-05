@@ -1,0 +1,10 @@
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\TestingConsole.exe.config
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\TestingConsole.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\TestingConsole.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\Model.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\Model.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\obj\Debug\TestingConsole.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\obj\Debug\TestingConsole.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\obj\Debug\TestingConsole.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\DataAccess.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\TestingConsole\bin\Debug\DataAccess.pdb

@@ -1,0 +1,12 @@
+﻿using System.Collections.Generic;
+
+namespace Model.DomainModel
+{
+    public class QuestionGroup
+    {
+        public string Info { get; set; }
+        public int Sort { get; set; }
+        public List<Question> Questions { get; set; }
+
+    }
+}

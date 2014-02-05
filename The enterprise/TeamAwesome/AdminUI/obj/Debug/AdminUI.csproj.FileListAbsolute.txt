@@ -1,0 +1,13 @@
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\bin\Debug\AdminUI.exe.config
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\bin\Debug\AdminUI.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\bin\Debug\AdminUI.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\MainWindow.baml
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\MainWindow.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\App.g.cs
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI_MarkupCompile.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.g.resources
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.Properties.Resources.resources
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.csproj.GenerateResource.Cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.exe
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\AdminUI\obj\Debug\AdminUI.pdb

@@ -1,0 +1,44 @@
+﻿using System.Linq;
+using System.Windows;
+using Microsoft.Win32;
+using Model;
+using Model.DomainModel;
+
+namespace TheEnterprise
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+
+   
+
+    public partial class MainWindow : Window
+    {
+        private static Paging paging;
+        public ModelFacade ModelFacade;
+
+        public MainWindow()
+        {
+            // Init UI Componets & page system
+            InitializeComponent();
+            ModelFacade = new ModelFacade(FilterType.TestTemplate);
+            ModelFacade.FindQuestionGroup(1).Title = "hehehehheehheeheheheehehehhe";
+            paging = new Paging(this);
+            // Show home view
+            paging.ChangePage(Page.AdminQuestionGroupTemplate);
+        }
+
+        private void FilterOpen(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Filter files (*.filter*)|*.filter*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.ShowDialog();
+        }
+
+      
+    }
+}

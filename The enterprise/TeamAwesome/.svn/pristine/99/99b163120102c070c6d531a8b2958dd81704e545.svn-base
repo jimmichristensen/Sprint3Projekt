@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+
+using Model.DomainModel;
+using TheEnterprise.Design;
+
+namespace TheEnterprise.Pages.Admin.PopUp.QuestionGroup
+{
+    /// <summary>
+    /// Interaction logic for UpdateQuestionGroup.xaml
+    /// </summary>
+
+    public partial class UpdateQuestionGroup : Window
+    {
+        MainWindow main;
+        private Model.DomainModel.QuestionGroup questionGroup;
+        public UpdateQuestionGroup(Model.DomainModel.QuestionGroup questionGroup, MainWindow Main)
+        {
+            InitializeComponent();
+            main = Main;
+            this.questionGroup = questionGroup;
+
+            QuestionInfoGroupTextBox.Text = questionGroup.Info;
+            QuestionGroupTitleTextBox.Text = questionGroup.Title;
+            QuestionRankGroupTextBox.Text = questionGroup.Rank.ToString();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            decimal parsedValue;
+            if (QuestionGroupTitleTextBox.Text != "" && QuestionInfoGroupTextBox.Text != "" && QuestionRankGroupTextBox.Text != "")
+            {
+                if (decimal.TryParse(QuestionRankGroupTextBox.Text,out parsedValue))
+                {
+                    if (questionGroup.Rank == parsedValue || Helper.CheckQuestionGroupRank(parsedValue, main.ModelFacade.Filter.QuestionGroups) == true)
+                    {
+                        questionGroup.Info = QuestionInfoGroupTextBox.Text;
+                        questionGroup.Title = QuestionGroupTitleTextBox.Text;
+                        questionGroup.Rank = decimal.Parse(QuestionRankGroupTextBox.Text);
+                        Close();  
+                    }
+                    else
+                    {
+                        updateFeedbackLabel.Content = "Det valgte rank er ikke tilgængeligt!";
+                    }
+                }
+                else
+                {
+                    updateFeedbackLabel.Content = "Rank skal være tal!";
+                }
+            }
+            else
+            {
+                updateFeedbackLabel.Content = "Alle felter skal være udfyldt!";
+            }
+        }
+    }
+}

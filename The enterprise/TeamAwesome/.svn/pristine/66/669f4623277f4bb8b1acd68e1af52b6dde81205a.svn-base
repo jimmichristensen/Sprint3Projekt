@@ -1,0 +1,74 @@
+﻿using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using Microsoft.Win32;
+using Model;
+using Model.DomainModel;
+using TheEnterprise.Pages;
+
+namespace TheEnterprise
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+
+    public partial class MainWindow : Window
+    {
+        private static Paging paging;
+        public ModelFacade ModelFacade;
+
+        public MainWindow()
+        {
+            // Init UI Componets & page system
+            InitializeComponent();
+            ModelFacade = new ModelFacade(FilterType.SimonsTest);
+            paging = new Paging(this);
+            // Show home view
+
+            paging.ChangePage(new homeView(this));
+
+
+
+
+            //Test only
+            ShowError("Test Error gg q");
+
+        }
+
+        private void FilterOpen(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Filter files (*.filter*)|*.filter*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.ShowDialog();
+        }
+
+        public void ChangeView(UserControl view)
+        {
+            paging.ChangePage(view);
+        }
+
+        private void AdminMenu_Click(object sender, RoutedEventArgs e)
+        {
+            paging.ChangePage(new QuestionGroupView(this));
+        }
+
+        public void ShowError(string errorMessage)
+        {
+            // Bruger ->    FeedBackLabel
+            FeedBackLabel.Content = errorMessage;
+
+            AnimationClass.fadeIn(FeedBackLabel, 0.8);
+
+
+        }
+      
+    }
+
+}

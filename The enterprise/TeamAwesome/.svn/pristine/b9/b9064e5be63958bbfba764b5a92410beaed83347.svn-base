@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace TheEnterprise.Pages.Admin.PopUp.Question
+{
+    /// <summary>
+    /// Interaction logic for UpdateQuestion.xaml
+    /// </summary>
+    public partial class UpdateQuestion : Window
+    {
+
+        private Model.DomainModel.Question question;
+        private MainWindow mainWindow;
+        public UpdateQuestion(Model.DomainModel.Question question,MainWindow mainWindow)
+        {
+            InitializeComponent();
+            this.question = question;
+            this.mainWindow = mainWindow;
+            QuestionRankTextBox.Text = question.Rank.ToString();
+            QuestionTitelTextBox.Text = question.Title;
+
+            var noRequired = new Model.DomainModel.QuestionGroup()
+            {
+                Title = "Ikke required",
+                Rank = 0
+            };
+            RequiredQuestionGroup.Items.Add(noRequired);
+            foreach (Model.DomainModel.QuestionGroup questionGroup in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                RequiredQuestionGroup.Items.Add(questionGroup);
+            }
+
+            if (question.Required == null)
+            {
+                RequiredQuestionGroup.SelectedIndex = 0;
+            }
+            else
+            {
+                int index = 0;
+                foreach (Model.DomainModel.QuestionGroup questionGroup in RequiredQuestionGroup.Items)
+                {
+                    
+                }
+            }
+
+            
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.question.Title = QuestionTitelTextBox.Text;
+            this.question.Rank = decimal.Parse(QuestionRankTextBox.Text);
+            Close();
+        }
+    }
+}

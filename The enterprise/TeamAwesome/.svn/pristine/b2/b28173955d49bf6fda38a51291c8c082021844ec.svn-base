@@ -1,0 +1,35 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Controls;
+using TheEnterprise.Pages;
+using TheEnterprise.Pages.Admin;
+
+namespace TheEnterprise
+{
+
+    public delegate void ChangePageDelegate(Page page);
+
+    public class Paging
+    {
+        public static event ChangePageDelegate ChangedPage;
+
+        private Dictionary<Page, UserControl> pages = new Dictionary<Page, UserControl>();
+        private Grid content;
+
+
+        public Paging(MainWindow mainWindow)
+        {
+            content = mainWindow.Content;
+            pages.Add(Page.AdminQuestionGroupTemplate, new QuestionGroupTemplate(mainWindow));
+        }
+
+        public void ChangePage(Page page)
+        {
+            //ChangedPage(page);
+            content.Children.Clear();
+            content.Children.Add(pages[page]);
+        }
+    }
+
+    public enum Page { AdminQuestionGroupTemplate }
+}

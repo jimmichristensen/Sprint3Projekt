@@ -1,0 +1,26 @@
+﻿namespace Model
+{
+    public class ModelFacade
+    {
+        public void Load()
+        {
+
+        }
+
+        public void Save()
+        {
+
+        }
+
+        public void New()
+        {
+
+        }
+
+        public void Print()
+        {
+            
+        }
+
+    }
+}

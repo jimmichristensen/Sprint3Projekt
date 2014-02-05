@@ -1,0 +1,74 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows.Controls;
+using Model.DomainModel;
+using System.Diagnostics;
+using System.Windows.Documents;
+using System;
+
+namespace TheEnterprise
+{
+    public static class Helper
+    {
+
+
+        public static bool CheckQuestionGroupRank(decimal rank,  List<QuestionGroup> questionGroup)
+        {
+            try
+            {
+                questionGroup.First(q => q.Rank == rank);
+                return false;
+            }
+            catch
+            {
+                return true;
+            }           
+        }
+
+        public static bool QuestionRank(decimal rank, MainWindow mainWindow)
+        {
+            foreach (QuestionGroup qg in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                foreach (Question q in qg.Questions)
+                {
+                    if (rank == q.Rank)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            }
+            throw new Exception("Fejl");
+        }
+
+        public static bool AnswerRank(decimal rank, MainWindow mainWindow)
+        {
+            foreach(QuestionGroup qg in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                foreach(Question q in qg.Questions)
+                {
+                    if (q.Answers.Count < 1)
+                    {
+                        continue;
+                    }
+                    foreach(Answer a in q.Answers)
+                    {
+                        if(rank == a.Rank)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+    }
+}

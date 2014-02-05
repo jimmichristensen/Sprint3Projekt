@@ -1,0 +1,50 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using Model.DomainModel;
+using TheEnterprise.Design;
+using System.Collections.Generic;
+
+
+namespace TheEnterprise.Pages.Admin
+{
+    /// <summary>
+    /// Interaction logic for QuestionGroupTemplate.xaml
+    /// </summary>
+    public partial class QuestionGroupTemplate : UserControl
+    {
+        private MainWindow mainWindow;
+
+        QuestionGroupGrid questionGroupGrid = new QuestionGroupGrid();    
+
+        public QuestionGroupTemplate(MainWindow mainWindow)
+        {
+            InitializeComponent();
+            this.mainWindow = mainWindow;
+            questionGroupGrid.NewRowCrated += newRowAdded;
+
+            foreach (QuestionGroup questionGroup in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                questionGroupGrid.AddRow(questionGroup, QuestionGroupList, questionGroup.Title, questionGroup.Rank);
+            }
+
+        }
+
+        private void createQuestionGroup_CLICK(object sender, RoutedEventArgs e)
+        {
+            questionGroupGrid.AddRow(new QuestionGroup()
+            {
+                Info = "Skriv info",
+                Rank = 0,
+                Title = "Skriv title"
+            }, QuestionGroupList, "Skriv title", 0,true);
+        }
+
+        private void newRowAdded()
+        {
+
+        }
+
+    }
+}

@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess.Helpers;
+using Model.DomainModel;
+
+namespace DataAccess.Controller
+{
+    class FilterDataAccessController
+    {
+
+        BinaryHelper<Filter> binaryHelper = new BinaryHelper<Filter>();
+
+        public Filter Load(FilterType filterType)
+        {
+            if(! binaryHelper.FileExists(getFilename(filterType))) 
+            {
+                Save(new Filter(){Type=filterType},filterType);
+            }
+            return binaryHelper.LoadObject(getFilename(filterType));
+        }
+
+        public void Save(Filter filter,FilterType filterType)
+        {
+            binaryHelper.SaveObject( filter , getFilename(filterType) );
+        }
+
+        public void Find()
+        {
+            // Hent filter arkiv filen og søge efter filnavne
+
+        }
+
+        private string getFilename(FilterType filterType)
+        {
+
+            string folder = "templates/";
+
+            switch (filterType)
+            {
+                case FilterType.TestTemplate:
+                {
+                    return folder+"TestTemplate.bin";
+                }
+                case FilterType.EnglishTemplate:
+                {
+                    return folder+"EnglishTemplate.bin";
+                }
+                case FilterType.DanishTemplate:
+                {
+                    return folder+"EnglishTemplate.bin";
+                }
+                case FilterType.SimonsTest:
+                {
+                    return folder + "SimonsTestTemplate.bin";
+                }
+            }
+
+            throw new Exception("Forkert filter type");
+        }
+
+
+    }
+}

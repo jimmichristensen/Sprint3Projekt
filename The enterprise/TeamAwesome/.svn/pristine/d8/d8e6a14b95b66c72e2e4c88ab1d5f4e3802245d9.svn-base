@@ -1,0 +1,27 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows.Controls;
+using Model.DomainModel;
+using System.Diagnostics;
+using System.Windows.Documents;
+
+namespace TheEnterprise
+{
+    public static class Helper
+    {
+        public static bool CheckQuestionGroupRank(decimal rank,  List<QuestionGroup> questionGroup)
+        {
+            try
+            {
+                questionGroup.First(q => q.Rank == rank);
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+           
+        }
+    }
+}

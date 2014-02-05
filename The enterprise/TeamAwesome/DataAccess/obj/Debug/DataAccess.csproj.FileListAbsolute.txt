@@ -1,0 +1,15 @@
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Simon\Documents\Visual Studio 2012\Projects\TeamAwesome\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\TeamAwesome\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\TeamAwesome\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\TeamAwesome\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\TeamAwesome\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\TeamAwesome\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Simon\Desktop\'\skole\Projekt\The enterprise\TeamAwesome\DataAccess\obj\Debug\DataAccess.pdb

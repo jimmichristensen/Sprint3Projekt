@@ -1,0 +1,136 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using DataAccess;
+using Microsoft.Win32;
+using System.Windows.Threading;
+using Model;
+using Model.DomainModel;
+using TheEnterprise.Pages;
+using System.IO;
+using WpfPageTransitions;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using UserControl = System.Windows.Controls.UserControl;
+
+namespace TheEnterprise
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+
+    public partial class MainWindow : Window
+    {
+        private static Paging paging;
+        public ModelFacade ModelFacade;
+        public static double AnimationSpeed = 0.177;
+
+        public MainWindow()
+        {
+            // Init UI Componets & page system
+            InitializeComponent();
+
+            try
+            {     
+                ModelFacade = new ModelFacade(FilterType.TestTemplate);
+                paging = new Paging(this);
+
+                pageTransition.ShowPage(new homeView(this));
+            }
+            catch (Exception ex)
+            {
+                ShowError(ex.Message,true);
+            }
+ 
+
+        }
+
+        private void FilterOpen(object sender, RoutedEventArgs e)
+        {
+
+           
+        }
+
+        public void ChangeView(UserControl view, bool reverseAnimation)
+        {
+            if (reverseAnimation)
+            {
+                pageTransition.TransitionType = (PageTransitionType)Enum.Parse(typeof(PageTransitionType), "SlideReversed", true);
+            }
+            else
+            {
+                pageTransition.TransitionType = (PageTransitionType)Enum.Parse(typeof(PageTransitionType), "Slide", true);
+            }
+            pageTransition.ShowPage(view);
+            HideError();
+        }
+
+        private void AdminMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeView(new QuestionGroupView(this), false );
+        }
+
+        public void ShowError(string errorMessage, bool badError)
+        {
+            AnimationClass.fadeIn(FeedBackLabel, AnimationSpeed); FeedBackLabel.Content = errorMessage; 
+            if (badError)
+            {
+                FeedBackLabel.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+            }
+            else
+            {
+                FeedBackLabel.Foreground = new SolidColorBrush(Color.FromRgb(0, 200, 0));
+            }
+
+            // -------- Kode som fjerner errorbesked efter 60 sec.
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += delegate(object s, DoWorkEventArgs args)
+            { Thread.Sleep(60*1000); };
+            worker.RunWorkerCompleted += delegate(object s, RunWorkerCompletedEventArgs args)
+            { HideError(); };
+            worker.RunWorkerAsync();
+        }
+
+        public void HideError()
+        {
+            AnimationClass.fadeOut(FeedBackLabel, AnimationSpeed); FeedBackLabel.Content = "";
+        }
+
+        private void FilterNew_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeView(new Main(this), false);
+        }
+
+        private void LangChange_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem item = sender as MenuItem;
+            if (item.Name == "dk")
+            {
+                ModelFacade = new ModelFacade(FilterType.DanishTemplate);
+                pageTransition.ShowPage(new homeView(this));
+            }
+            if (item.Name == "de")
+            {
+                ModelFacade = new ModelFacade(FilterType.DeutschTemplate);
+                pageTransition.ShowPage(new homeView(this));
+            }
+            if (item.Name == "en")
+            {
+                ModelFacade = new ModelFacade(FilterType.EnglishTemplate);
+                pageTransition.ShowPage(new homeView(this));
+            }
+            if (item.Name == "test")
+            {
+                ModelFacade = new ModelFacade(FilterType.TestTemplate);
+                pageTransition.ShowPage(new homeView(this));
+            }
+        }
+      
+    }
+
+}

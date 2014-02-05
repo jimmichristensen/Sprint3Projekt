@@ -1,0 +1,248 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Forms.VisualStyles;
+using Model.DomainModel;
+using VerticalAlignment = System.Windows.VerticalAlignment;
+
+namespace TheEnterprise.Design
+{
+    class GridPresent
+    {
+
+        Grid grid = new Grid();
+        public QuestionGroup QuestionGroup;
+        List<RowEntity> rows = new List<RowEntity>(); 
+
+        public GridPresent(QuestionGroup questionGroup)
+        {
+            this.QuestionGroup = questionGroup;
+           init();   
+        }
+
+        public RowEntity addRow(decimal decimalRank,Question question)
+        {
+            int rank = calcRank(decimalRank);
+            createNewRowDefinition();
+
+            if (rank < grid.Children.Count -2)
+            {
+                clearMyRow(rank);
+            }
+            RowEntity newRow = new RowEntity(rank, grid, question);
+            rows.Add(newRow);
+            return newRow;
+
+        }
+        public void RemoveRow(Question question)
+        {
+            RowEntity rowToRemove = rows.Single(r => r.QuestionObject.Rank == question.Rank);
+            grid.Children.Remove(rowToRemove.AnswerComboBox);
+            grid.Children.Remove(rowToRemove.QuestionLabel);
+            rows.Remove(rowToRemove);
+            int emptyRank = rowToRemove.Rank;
+            int count = rows.Count;
+            int rowRankToMove = count - emptyRank +1;
+            int x = 1;
+            while (rowRankToMove >= x)
+            {
+                RowEntity rowToMove = rows.Single(r => r.Rank == (x+emptyRank));
+                rowToMove.Rank = x + emptyRank - 1;
+
+                Grid.SetRow(rowToMove.AnswerComboBox, rowToMove.Rank);
+                Grid.SetRow(rowToMove.QuestionLabel, rowToMove.Rank);
+
+                x++;
+            }
+
+        }
+        public Grid LoadGrid()
+        {
+            return grid;
+        }
+        public bool IsCopy(Question question)
+        {
+            try
+            {
+                rows.Single(r => r.QuestionObject.Rank == question.Rank);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public void Refresh(Filter filter)
+        {
+            while (needToRemove(filter)) ;
+        }
+
+        private bool needToRemove(Filter filter)
+        {
+            foreach (var row in rows)
+            {
+                if (!row.QuestionObject.IsActive(filter))
+                {
+                    RemoveRow(row.QuestionObject);
+                    return true;
+                    break;
+                }
+            }
+            return false;
+        }
+        private void clearMyRow(int clearPlacement)
+        {
+            int x = rows.Count - clearPlacement;
+            while (x >= 0)
+            {
+                int move = clearPlacement + x;
+
+                int newPlacement = move + 1;
+                RowEntity rowToMove = rows.Single(r => r.Rank == move);
+                Grid.SetRow(rowToMove.QuestionLabel, newPlacement);
+                Grid.SetRow(rowToMove.AnswerComboBox, newPlacement);
+                rowToMove.Rank = newPlacement;
+                x--;
+            }
+        }
+        private void createNewRowDefinition()
+        {
+            RowDefinition newRow = new RowDefinition();
+            newRow.Height = GridLength.Auto;
+            grid.RowDefinitions.Add(newRow);
+        }
+        private int calcRank(decimal rank)
+        {
+            // Antal rows
+            int rankCount = rows.Count;
+            // Start med at se om man er større end 1
+            int x = 1;
+            if (rows.Count < 1)
+            {
+                return x;
+            }
+            while (x <= rankCount)
+            {
+                // Er den på plads 1 højrere rank end den jeg giver
+                if (rank < rows.Single(r => r.Rank == x).QuestionObject.Rank)
+                {
+                    // Hvis ja, skal jeg bruge plads 1
+                    return x;
+                }
+                // Ellers prøver vi med næste
+                x++;
+            }
+            // Hvis ingen er fundet har man fået ny højeste
+            return x;
+        }
+        private void init()
+        {
+
+
+            // Create Columns
+            ColumnDefinition gridCol1 = new ColumnDefinition();
+            gridCol1.Width = new GridLength(1.0, GridUnitType.Star);
+            ColumnDefinition gridCol2 = new ColumnDefinition();
+            gridCol2.Width = new GridLength(200);
+            grid.ColumnDefinitions.Add(gridCol1);
+            grid.ColumnDefinitions.Add(gridCol2);
+
+            // Create Rows
+            RowDefinition gridRow1 = new RowDefinition();
+            grid.RowDefinitions.Add(gridRow1);
+
+            TextBlock headerQuestion = new TextBlock();
+            headerQuestion.Text = "Spørgsmål";
+            headerQuestion.FontSize = 12;
+            headerQuestion.Height = 30;
+            headerQuestion.FontWeight = FontWeights.Bold;
+            Grid.SetRow(headerQuestion, 0);
+            Grid.SetColumn(headerQuestion, 0);
+
+            TextBlock headerAnswer = new TextBlock();
+            headerAnswer.Text = "Svar";
+            headerAnswer.FontSize = 12;
+            headerAnswer.Height = 30;
+            headerAnswer.FontWeight = FontWeights.Bold;
+            Grid.SetRow(headerAnswer, 0);
+            Grid.SetColumn(headerAnswer, 1);
+
+            grid.Children.Add(headerQuestion);
+            grid.Children.Add(headerAnswer);
+
+
+        }
+    }
+
+
+    public delegate void GridDelegate(RowEntity row);
+
+    public class RowEntity
+    {
+
+        public RowEntity(int row, Grid grid, Question question)
+        {
+            Rank = row;
+            QuestionObject = question;
+            QuestionLabel = new TextBlock();
+            QuestionLabel.Text = question.Title;
+            QuestionLabel.FontSize = 12;
+            QuestionLabel.Height = 30;
+            QuestionLabel.FontWeight = FontWeights.Bold;
+            Grid.SetRow(QuestionLabel, row);
+            Grid.SetColumn(QuestionLabel, 0);
+
+            AnswerComboBox = new ComboBox();
+            AnswerComboBox.Height = 25;
+            AnswerComboBox.Margin = new Thickness(0,0,20,0);
+            AnswerComboBox.Uid = question.Rank.ToString();
+
+
+            AnswerComboBox.ItemsSource = question.Answers;
+            int x = 0;
+            if (question.Default != null)
+            {
+                foreach (Answer a in question.Answers)
+                {
+                    if (question.Default.Title == a.Title)
+                    {
+                        question.Value = a;
+                        AnswerComboBox.SelectedIndex = 0;
+                        break;
+                    }
+                    x++;
+                }
+            }
+            else if (question.Answers.Count == 1)
+            {
+                AnswerComboBox.SelectedIndex = 0;
+                question.Value = question.Answers.First();
+            }
+
+
+            Grid.SetRow(AnswerComboBox,row);
+            Grid.SetColumn(AnswerComboBox,1);
+            grid.Children.Add(AnswerComboBox);
+            grid.Children.Add(QuestionLabel);
+
+            AnswerComboBox.AddHandler(ComboBox.SelectionChangedEvent, new SelectionChangedEventHandler(selectionChange));
+
+        }
+
+        public event GridDelegate SelectionChanged;      
+        public TextBlock QuestionLabel { get; set; }
+        public ComboBox AnswerComboBox { get; set; }
+        public Question QuestionObject { get; set; }
+        public int Rank { get; set; }
+        private void selectionChange(object sender, SelectionChangedEventArgs e)
+        {
+            SelectionChanged(this);
+        }
+    }
+
+  
+}

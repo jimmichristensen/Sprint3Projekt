@@ -1,0 +1,62 @@
+﻿using System.Linq;
+using Model.DomainModel;
+using DataAccess;
+namespace Model
+{
+    public class ModelFacade
+    {
+        public Filter Filter;
+        DataAccessFacade dataAccess = new DataAccessFacade();
+
+        public ModelFacade(FilterType filterType)
+        {
+            Filter = dataAccess.Load(filterType);
+        }
+        public ModelFacade(Filter filter)
+        {
+            this.Filter = filter;
+        }
+
+        public void LoadFilter()
+        {
+           
+        }
+        public void LoadTemplate(FilterType filterType)
+        {
+            
+        }
+
+        public void Save()
+        {
+            dataAccess.Save(Filter,Filter.Type);
+        }
+
+        // Search in filter
+        public QuestionGroup FindQuestionGroup(int rank)
+        {
+            return Filter.QuestionGroups.Single(q => q.Rank == 1);
+        }
+        public Question FindQuestion(int questionGroupRank, int questionRank)
+        {
+            return FindQuestionGroup(questionGroupRank).Questions.Single(q => q.Rank == questionRank);
+        }
+        public Question FindQuestion(QuestionGroup questionGroup, int questionRank)
+        {
+            return questionGroup.Questions.Single(q => q.Rank == questionRank);
+        }
+        public Answer FindAnswer(int questionGroupRank, int questionRank, int answerRank)
+        {
+            return FindQuestion(questionGroupRank, questionRank).Answers.Single(a => a.Rank == answerRank);
+        }
+        public Answer FindAnswer(Question question, int answerRank)
+        {
+            return question.Answers.Single(a => a.Rank == answerRank);
+        }
+
+        public void Print()
+        {
+            
+        }
+
+    }
+}

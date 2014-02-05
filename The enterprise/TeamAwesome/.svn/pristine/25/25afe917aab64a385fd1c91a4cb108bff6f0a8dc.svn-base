@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace TheEnterprise.Pages.Admin.PopUp.Question
+{
+    /// <summary>
+    /// Interaction logic for UpdateQuestion.xaml
+    /// </summary>
+    public partial class UpdateQuestion : Window
+    {
+
+        private Model.DomainModel.Question question;
+        private MainWindow mainWindow;
+        public UpdateQuestion(Model.DomainModel.Question question,MainWindow mainWindow)
+        {
+            InitializeComponent();
+            this.question = question;
+            this.mainWindow = mainWindow;
+            QuestionRankTextBox.Text = question.Rank.ToString();
+            QuestionTitelTextBox.Text = question.Title;
+
+            var noRequired = new Model.DomainModel.QuestionGroup()
+            {
+                Title = "Ikke required",
+                Rank = 0
+            };
+            RequiredQuestionGroup.Items.Add(noRequired);
+            foreach (Model.DomainModel.QuestionGroup questionGroup in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                RequiredQuestionGroup.Items.Add(questionGroup);
+            }
+
+            if (question.Required == null)
+            {
+                RequiredQuestionGroup.SelectedIndex = 0;
+            }
+            else
+            {
+                setRequired();
+            }
+
+            
+
+
+        }
+
+        private void setRequired()
+        {
+            // Question group
+            int index = 0;
+            foreach (Model.DomainModel.QuestionGroup questionGroup in RequiredQuestionGroup.Items)
+            {
+                if (question.Required.QuestionGroup.Rank == questionGroup.Rank)
+                {
+                    break;
+                }
+                index++;
+            }
+            RequiredQuestionGroup.SelectedIndex = index;
+
+            // Spørgsmål
+            Model.DomainModel.QuestionGroup selectedQuestionGroup = RequiredQuestionGroup.SelectedItem as Model.DomainModel.QuestionGroup;
+            RequiredQuestion.ItemsSource = null;
+            if (selectedQuestionGroup != null)
+            {
+                RequiredQuestion.ItemsSource = selectedQuestionGroup.Questions;
+            }
+
+            index = 0;
+            foreach (Model.DomainModel.Question question in RequiredQuestion.Items)
+            {
+                if (this.question.Required.Rank == question.Rank)
+                {
+                    break;
+                }
+                index++;
+            }
+            RequiredQuestion.SelectedIndex = index;
+
+            Model.DomainModel.Question selectedQuestion = RequiredQuestion.SelectedItem as Model.DomainModel.Question;
+            RequiredAnswer.ItemsSource = null;
+            if (selectedQuestion != null)
+            {
+                RequiredAnswer.ItemsSource = selectedQuestion.Answers;
+            }
+
+            index = 0;
+            foreach (Model.DomainModel.Answer answer in RequiredAnswer.Items)
+            {
+                if (question.Required.Value.Rank == answer.Rank)
+                {
+                    break;
+                }
+                index++;
+            }
+            RequiredAnswer.SelectedIndex = index;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.question.Title = QuestionTitelTextBox.Text;
+            this.question.Rank = decimal.Parse(QuestionRankTextBox.Text);
+            Close();
+        }
+    }
+}

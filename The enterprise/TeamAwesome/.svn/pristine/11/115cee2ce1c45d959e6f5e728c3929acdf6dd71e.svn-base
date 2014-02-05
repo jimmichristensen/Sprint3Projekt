@@ -1,0 +1,24 @@
+﻿using System.Runtime.CompilerServices;
+
+namespace DataAccess
+{
+    public class DataAccessFacade
+    {
+
+        public void Load()
+        {
+            
+        }
+
+        public void Save()
+        {
+            
+        }
+
+        public void New()
+        {
+            
+        }
+
+    }
+}

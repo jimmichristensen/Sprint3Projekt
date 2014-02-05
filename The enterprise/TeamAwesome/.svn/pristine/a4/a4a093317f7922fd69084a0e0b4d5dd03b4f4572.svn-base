@@ -1,0 +1,31 @@
+﻿<Window x:Class="TheEnterprise.Pages.Admin.PopUp.Question.UpdateQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UpdateQuestion"  Height="310" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Ændre spørgsmål" FontSize="15" />
+            <StackPanel Orientation="Horizontal" Height="215">
+                <StackPanel Width="196" >
+                    <Label Content="Titel" Height="30"/>
+                    <Label Content="Rank" Height="30"/>
+                    <Label Content="Required" Height="30"/>
+
+                </StackPanel>
+                <StackPanel Width="180" >
+                    <TextBox Height="30" TextWrapping="Wrap"  Name="QuestionTitelTextBox"/>
+                    <TextBox Height="30" TextWrapping="Wrap" Name="QuestionRankTextBox"/>
+                    <ComboBox x:Name="RequiredQuestionGroup" SelectionChanged="RequiredQuestionGroup_SelectionChanged"/>
+                    <ComboBox x:Name="RequiredQuestion" SelectionChanged="RequiredQuestion_SelectionChanged" />
+                    <ComboBox x:Name="RequiredAnswer" />
+
+
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Gem" Width="70" Click="Button_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
+

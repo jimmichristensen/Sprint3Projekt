@@ -1,0 +1,130 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace TheEnterprise.Pages.Admin.PopUp.Question
+{
+    /// <summary>
+    /// Interaction logic for CreateQuestion.xaml
+    /// </summary>
+    public delegate void CreateQuestionDelegate(string printTitle,string title, decimal rank, Model.DomainModel.Question question = null);
+    
+    public partial class CreateQuestion : Window
+    {
+
+        public event CreateQuestionDelegate CreateNewQuestion;
+        private MainWindow mainWindow;
+        public CreateQuestion(MainWindow mainWindow)
+        {
+            InitializeComponent();
+            this.mainWindow = mainWindow;
+            var noRequired = new Model.DomainModel.QuestionGroup()
+            {
+                Title = "Ikke required",
+                Rank = 0
+            };
+            RequiredQuestionGroup.Items.Add(noRequired);
+            foreach (Model.DomainModel.QuestionGroup questionGroup in mainWindow.ModelFacade.Filter.QuestionGroups)
+            {
+                RequiredQuestionGroup.Items.Add(questionGroup);
+            }
+
+            RequiredQuestionGroup.SelectedIndex = 0;
+
+        }
+
+        private void saveQuestion_Click(object sender, RoutedEventArgs e)
+        {
+            decimal parsedValue;
+            if (QuestionTitelTextBox.Text != "" && QuestionRankTextBox.Text != "" && QuestionPrintTitleTextBox.Text != null)
+            {
+                if (decimal.TryParse(QuestionRankTextBox.Text,out parsedValue))
+                {
+                    if (Helper.QuestionRank(parsedValue,mainWindow) == true)
+                    {
+                    Model.DomainModel.Question reuqired = requiredQuestion();
+                    CreateNewQuestion(QuestionPrintTitleTextBox.Text,QuestionTitelTextBox.Text, decimal.Parse(QuestionRankTextBox.Text), reuqired);
+                    this.Close();
+                    }
+                    else
+                    {
+                        ErrorLabel.Content = "Rank er ikke tilgængeligt!";
+                    }
+                }
+                else
+                {
+                    ErrorLabel.Content = "Rank skal være tal";
+                }
+            }
+            else
+            {
+                ErrorLabel.Content = "Alle felter skal udfyldes";
+            }
+        }
+
+        private Model.DomainModel.Question requiredQuestion()
+        {
+            // Tjek om alle 3 er sat
+            Model.DomainModel.QuestionGroup selectedQuestionGroup = RequiredQuestionGroup.SelectedItem as Model.DomainModel.QuestionGroup;
+            if (selectedQuestionGroup.Rank == 0)
+            {
+                return null;
+            }
+            if ( RequiredQuestion.SelectedItem == null )
+            {
+                throw new Exception("Du skal vælge det spørgsmål du vil være required til");
+            }
+            if (RequiredAnswer.SelectedItem == null)
+            {
+                throw new Exception("Du skal vælge den svarmulighed du vil være required til");
+            }
+
+            // Opret required object og return :)
+            var question = RequiredQuestion.SelectedItem as Model.DomainModel.Question;
+            return question.CreateRequiredObject(RequiredAnswer.SelectedItem as Model.DomainModel.Answer);
+        }
+
+        // Spørgsmåls gruppe valgt
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Model.DomainModel.QuestionGroup selectedQuestionGroup = RequiredQuestionGroup.SelectedItem as Model.DomainModel.QuestionGroup;
+            RequiredQuestion.ItemsSource = null;
+            if (selectedQuestionGroup != null) 
+            {
+                if (selectedQuestionGroup.Rank == 0)
+                {
+                    RequiredQuestion.ItemsSource = null;
+                    RequiredAnswer.ItemsSource = null;
+                }
+                else
+                {
+                    RequiredQuestion.ItemsSource = selectedQuestionGroup.Questions;
+                }
+
+                
+            }
+            
+        }
+        // Spørgsmål valgt
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            Model.DomainModel.Question selectedQuestion = RequiredQuestion.SelectedItem as Model.DomainModel.Question;
+            RequiredAnswer.ItemsSource = null;
+            if (selectedQuestion != null) 
+            {
+                RequiredAnswer.ItemsSource = selectedQuestion.Answers;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Model.DomainModel;
+using TheEnterprise.Pages.Admin;
+using TheEnterprise.Pages.Admin.PopUp.Question;
+
+namespace TheEnterprise.Pages
+{
+    /// <summary>
+    /// Interaction logic for QuestionView.xaml
+    /// </summary>
+    public partial class QuestionView : UserControl
+    {
+        private MainWindow mainWindow;
+        private QuestionGroup questionGroup;
+
+        public QuestionView(MainWindow mainWindow,QuestionGroup questionGroup)
+        {
+            InitializeComponent();
+            this.mainWindow = mainWindow;
+            this.questionGroup = questionGroup;
+
+            QuestionListBox.ItemsSource = mainWindow.ModelFacade.FindQuestionGroup(questionGroup).Questions;
+
+        }
+
+        private void OpenAnswers_Click(object sender, RoutedEventArgs e)
+        {
+            if (QuestionListBox.SelectedItem != null) 
+            { 
+            Question selectedQuestion = QuestionListBox.SelectedItem as Question;
+            mainWindow.ChangeView(new AnswerView(mainWindow,questionGroup,selectedQuestion));
+            }
+        }
+
+        private void CreateQuestionButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateQuestion createWindow = new CreateQuestion(mainWindow);
+            createWindow.CreateNewQuestion += CreateNewQuestionWindow;
+            createWindow.Show();
+        }
+
+        private void CreateNewQuestionWindow(string title, decimal rank)
+        {
+            mainWindow.ModelFacade.FindQuestionGroup(questionGroup.Rank).Questions.Add(new Question()
+            {
+                Title = title,
+                Rank = rank
+            });
+            QuestionListBox.Items.Refresh();
+            mainWindow.ModelFacade.Save();
+        }
+
+        private void PageBack_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.ChangeView(new QuestionGroupView(mainWindow));
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿<Window x:Class="TheEnterprise.Pages.Admin.PopUp.Question.CreateQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CreateQuestion" Height="332.388" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Opret spørgsmål" FontSize="15" />
+            <Label x:Name="ErrorLabel" Content="" HorizontalAlignment="Left" Width="392" Foreground="Red" />
+            <StackPanel Orientation="Horizontal" Height="215">
+                <StackPanel Width="196" >
+                    <Label Content="Titel" Height="30" Margin="0,0,0,5"/>
+                    <Label Content="Print Titel" Height="30" Margin="0,0,0,5"/>
+                    <Label Content="Rank" Height="30" Margin="0,0,0,5"/>
+                    <Label Content="Spørgsmålsgruppe" Height="30"/>
+                    <Label Content="Spørgsmål" Height="30"/>
+                    <Label Content="Svar" Height="30"/>
+
+                </StackPanel>
+                <StackPanel Width="180" >
+                    <TextBox Height="30" TextWrapping="Wrap" Name="QuestionTitelTextBox" Margin="0,0,0,5"/>
+                    <TextBox Height="30" TextWrapping="Wrap" Name="QuestionPrintTitleTextBox" Margin="0,0,0,5"/>
+                    <TextBox Height="30" TextWrapping="Wrap" Name="QuestionRankTextBox" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="RequiredQuestionGroup" SelectionChanged="ComboBox_SelectionChanged" Margin="0,0,0,5" Height="25"/>
+                    <ComboBox x:Name="RequiredQuestion" SelectionChanged="ComboBox_SelectionChanged_1" Margin="0,0,0,5" Height="25"/>
+                    <ComboBox x:Name="RequiredAnswer" Margin="0,0,0,5" Height="25" />
+
+
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Gem" Width="70" Click="saveQuestion_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Microsoft.Win32;
+using Model;
+using Model.DomainModel;
+using TheEnterprise.Pages;
+using System.IO;
+
+namespace TheEnterprise
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+
+    public partial class MainWindow : Window
+    {
+        private static Paging paging;
+        public ModelFacade ModelFacade;
+        public static double AnimationSpeed = 0.177;
+
+        public MainWindow()
+        {
+            // Init UI Componets & page system
+            InitializeComponent();
+            ModelFacade = new ModelFacade(FilterType.SimonsTest);
+     
+            QuestionGroup questionGroup = ModelFacade.FindQuestionGroup(3);
+            questionGroup.Questions = new BindingList<Question>();
+            var reader = new StreamReader(File.OpenRead(@"C:\lol.csv"));
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                var values = line.Split(',');
+
+                questionGroup.Questions.Add(new Question()
+                {
+                        Title = values[0],
+                        PrintTitle = values[1]
+                });
+            }
+  
+            paging = new Paging(this);
+            // Show home view
+
+            //paging.ChangePage(new homeView(this));
+            pageTransition.ShowPage(new homeView(this));
+
+        }
+
+        private void FilterOpen(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.Filter = "Filter files (*.filter*)|*.filter*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.ShowDialog();
+        }
+
+        public void ChangeView(UserControl view)
+        {
+            //paging.ChangePage(view); //gamle metode
+            pageTransition.ShowPage(view);
+        }
+
+        private void AdminMenu_Click(object sender, RoutedEventArgs e)
+        {
+            //paging.ChangePage(new QuestionGroupView(this));
+            pageTransition.ShowPage(new QuestionGroupView(this));
+        }
+
+        public void ShowError(string errorMessage, bool badError)
+        {
+            AnimationClass.fadeIn(FeedBackLabel, AnimationSpeed); FeedBackLabel.Content = errorMessage; 
+            if (badError)
+            {
+                FeedBackLabel.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+            }
+            else
+            {
+                FeedBackLabel.Foreground = new SolidColorBrush(Color.FromRgb(0, 200, 0));
+            }
+        }
+
+        public void HideError()
+        {
+            AnimationClass.fadeOut(FeedBackLabel, AnimationSpeed); FeedBackLabel.Content = "";
+        }
+
+        private void FilterNew_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeView(new Main(this));
+        }
+      
+    }
+
+}

@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess;
+
+namespace Model.DomainModel
+{
+    [Serializable()]
+    public class Answer
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Value { get; set; }
+        public Question Question { get; set; }
+
+        public Question Required
+        {
+            set;
+            get;
+        }
+
+        public Answer()
+        {
+            Id = AI.New("Answer");
+        }
+
+        public bool IsActive(Filter filter)
+        {
+            /*
+            if (Required != null)
+            {
+                if (filter.FindQuestion(Required).Value != Required.Value)
+                {
+                    return false;
+                }
+            }
+            return true;
+             */
+            return true;
+        }
+
+        public decimal Rank { get; set; }
+
+        public override string ToString()
+        {
+            return Title;
+        }
+    }
+}
