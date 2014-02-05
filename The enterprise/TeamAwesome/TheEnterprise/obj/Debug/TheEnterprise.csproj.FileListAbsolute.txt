@@ -178,3 +178,6 @@ C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\Th
 C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.csproj.GenerateResource.Cache
 C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe.manifest
 C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.application
+C:\Users\Soap\Documents\GitHub\Sprint3Projekt\The enterprise\TeamAwesome\TheEnterprise\bin\Debug\TheEnterprise.exe.config
+C:\Users\Soap\Documents\GitHub\Sprint3Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.exe
+C:\Users\Soap\Documents\GitHub\Sprint3Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\TheEnterprise.pdb

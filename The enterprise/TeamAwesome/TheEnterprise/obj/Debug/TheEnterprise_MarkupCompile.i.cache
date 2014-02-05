@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\
+C:\Users\Soap\Documents\GitHub\Sprint3Projekt\The enterprise\TeamAwesome\TheEnterprise\obj\Debug\
 TheEnterprise
 none
 false
 DEBUG;TRACE
-C:\Users\JeppeJuul\Desktop\The enterprise\TeamAwesome\TheEnterprise\App.xaml
+C:\Users\Soap\Documents\GitHub\Sprint3Projekt\The enterprise\TeamAwesome\TheEnterprise\App.xaml
 12-1176980373
 
-26-1238356170
-24-1584412269
+26772744924
+24-964225425
 MainWindow.xaml;Pages\Admin\AnswerView.xaml;Pages\Admin\PopUp\Answer\CreateAnswer.xaml;Pages\Admin\PopUp\Answer\UpdateAnswer.xaml;Pages\Admin\PopUp\QuestionGroup\CreateQuestianGroup.xaml;Pages\Admin\PopUp\QuestionGroup\UpdateQuestionGroup.xaml;Pages\Admin\PopUp\Question\CreateQuestion.xaml;Pages\Admin\PopUp\Question\UpdateQuestion.xaml;Pages\Admin\QuestionGroupView.xaml;Pages\Admin\QuestionView.xaml;Pages\homeView.xaml;Pages\Main.xaml;
 
 False
